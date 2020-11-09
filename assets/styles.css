@@ -71,6 +71,12 @@ p{
     padding: 0 1.5rem;
     margin: 0 auto;
     color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    /* display: flex; */
+    
 }
 
 .btn{
@@ -129,7 +135,10 @@ header{
     font-weight: bold;
     font-size: 1.8rem;
     position: relative;
+    z-index: 2323;
+    display:block;
 }
+
 
 .navbar ul a::before{
     content: '';
@@ -155,13 +164,14 @@ header{
     transition: 0.3s all;
 }
 
-.navbar ul a:hover:before{
+.navbar ul a:hover::before{
     transform: scaleY(100%);
 }
 
-.navbar ul a:hover:after{
+.navbar ul a:hover::after{
     transform: scaleY(100%);
 }
+
 .nav-link{
     display: block;
     color: #fff;
@@ -184,7 +194,7 @@ header{
     text-align: center;
     align-items: center;
     position: relative;
-    z-index: -1;
+    z-index: 2;
 }
 
 #hero::before{
@@ -222,22 +232,23 @@ h3{
     display: flex;
 }
 
-.page-bg {
+.background-image {
     background-image: url("../images/amsterdam1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -11111;
+    display: block;
+    width: 100%;
+    height: 100%;
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -33331;
 }
 
 .btn-hero{
@@ -388,6 +399,7 @@ h3{
     transition: .8s ll;
     font-size: 2.1rem;
     transition: 0.8s all;
+    color: #fff;
 }
 
 .btn-card:hover{
@@ -414,9 +426,9 @@ h3{
     margin: 0 auto;
 }
 
-/* sidebar */
+/* sidebar rather not do it */
 
-.sidebar{
+/* .sidebar{
     position: absolute;
     left:0;
     top:50%;
@@ -438,7 +450,7 @@ h3{
     font-size: 2.5rem;
     padding: 0.5rem;
     cursor: pointer;
-}
+} */
 
 /* Planner styles */
 
@@ -446,12 +458,10 @@ h3{
     margin-top: 3rem;
 }
 
-.container{
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    /* display: flex; */
 
+.form-container{
+    display: flex;
+    margin-top: 2rem;
 }
 
 .form{
@@ -463,9 +473,9 @@ h3{
     font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 2.5rem 10rem;
-
-}
+    padding: 2.5rem;
+    letter-spacing: 0.4rem;
+    }
 
 .input-group{
     padding-top: 1.4rem;
@@ -474,7 +484,79 @@ h3{
 
 }
 
-.form-btn{
+.btn-form{
     max-width: 15rem;
     margin: 1.5rem auto;
+}
+
+.form-dots{
+    color: #fff;
+}
+
+input,
+select{
+    border: 3px solid #FBAF00;
+    padding: 1rem;
+}
+
+.btn-form{
+    border: 2px solid #2f3841;
+}
+
+.dots{
+    color: #13406d;
+}
+
+/* Contact styles */
+
+#contact{
+    margin: 2rem 0rem;
+}
+
+.footer-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-us p{
+    padding: 2rem;
+    color: #13406d;
+    font-weight: 800;
+}
+
+.contact-us p i{
+    margin: 0 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.8s all;
+    color: #FBAF00;
+}
+
+.contact-us p i:hover{
+    color: #13406d;
+
+}
+
+
+.social-media{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.social-media i{
+    margin: 0 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: 0.8s all;
+    color: #FBAF00;
+}
+
+.social-media i:hover{
+    color: #2f3841;
 }

@@ -30,9 +30,8 @@
     </div>
     </header>
     <section id="hero">
-        <div class="page-bg">
-</div>
-        <div class="container">
+        <div class="background-image"></div>
+        <div class="container content">
 
             <h1>Amazing places</h1>
 
@@ -46,12 +45,12 @@
     <section id="offers">
 
         
-
+<!-- 
         <ul class="sidebar">
             <li><i class="fas fa-dollar-sign"></i></li>
             <li><i class="fas fa-fire"></i></li>
             <li><i class="far fa-smile-beam"></i></i></li>
-        </ul>
+        </ul> -->
 
         <div class="headers">
             <h1>Last minute offers for <span class="you-animated">you</span></h1>
@@ -86,7 +85,7 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sequi iusto magnam adipisci alias exercitationem! Quia nulla dolorem atque tempora ullam provident magnam nostrum in eius libero, odit eos debitis!                </p>
                         </p>
-                        <a href="#" class="btn btn-card">Claim offer</a>
+                            <a href="#" class="btn btn-card">Claim offer</a>
                     </div>
                 </div>
 
@@ -116,22 +115,22 @@
 
             <h3>we will find you the best offers</h3>  
         </div>  
-        <div class="container">
+        <div class="container form-container">
             <form action="" class="form">
                 <div class="input-group">
-                    <label for="destination" class="input-label">Destination</label>
+                    <label for="destination" class="input-label">Destination <span class="form-dots">:</span></label>
                     <input type="text" class="input" id="destination">
                 </div>
                 <div class="input-group">
-                    <label for="check-in" class="input-label">Check-in</label>
+                    <label for="check-in" class="input-label">Check-in <span class="form-dots">:</span></label>
                     <input type="date" class="input" id="check-in">
                 </div>
                 <div class="input-group">
-                    <label for="check-out" class="input-label">Check-out</label>
+                    <label for="check-out" class="input-label">Check-out <span class="form-dots">:</span></label>
                     <input type="date" class="input" id="check-out">
                 </div>
                 <div class="input-group">
-                    <label for="adults" class="input-label">Adults</label>
+                    <label for="adults" class="input-label">Adults <span class="form-dots">:</span></label>
                     <select id="adults" class="options">
                         <option value="0">0</option>
                         <option value="1">1</option>
@@ -142,7 +141,7 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <label for="children" class="input-label">Children</label>
+                    <label for="children" class="input-label">Children <span class="form-dots">:</span></label>
                     <select id="children" class="options">
                         <option value="0">0</option>
                         <option value="1">1</option>
@@ -152,8 +151,10 @@
                         <option value="5">5</option>
                     </select>
                 </div>
-                <button class="btn form-btn btn-purple">Search
-                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                <button class="btn btn-card btn-form">Search
+                    <span class="dots">
+                    <i class="fas fa-ellipsis-h"></i>
+                    </span>
                 </button>
             </form>
         </div>
@@ -161,15 +162,30 @@
 
     <section id="contact">
 
-        <div class="container">
+        <div class="headers">
             <h1>Here you can find us</h1>
-            <p>example@example.net <i class="fas fa-envelope"></i></p>
-            <p>+36 30 404 34 34 <i class="fas fa-phone-alt"></i></p>
+            <h3>let's keep in touch </h3>  
+        </div>
+
+        <div class="footer-container container">
+
+            <div class="contact-us">
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    example@deparment.net 
+                </p>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    +44 1632 960785 
+                </p>
+            </div>
+            <div class="social-media">
             <p> 
             <i class="fab fa-instagram"></i>
             <i class="fab fa-facebook"></i>
             <i class="fab fa-tripadvisor"></i>
             </p>
+            </div>
         </div>
     </section>
 </body>
