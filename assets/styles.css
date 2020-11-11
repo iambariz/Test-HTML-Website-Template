@@ -92,15 +92,25 @@ p{
     letter-spacing: 0.1rem;
 }
 
+section:not(:first-of-type) {
+    margin-bottom: 10rem;
+}
+
 /* Header */
 header{
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1232320;
     background-color: var(--secondary-color);
     opacity: 0.8;
+    transition: 0.5s ease-out all;
+    color: #fff;
+}
+
+header.scrolled{
+    opacity: 1;
 }
 
 .trip{
@@ -114,6 +124,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
 }
 
 .hamburger{
@@ -139,7 +150,6 @@ header{
     display:block;
 }
 
-
 .navbar ul a::before{
     content: '';
     width: 0.3rem;
@@ -148,10 +158,9 @@ header{
     left: -0.4rem;
     background-color: var(--third-color);
     position: absolute;
-    transform: scaleY(0);
-    transition: 0.3s all;
+    transform: scaleY(0%);
+    transition: 0.5s ease-out all;
 }
-
 .navbar ul a::after{
     content: '';
     width: 0.3rem;
@@ -160,15 +169,16 @@ header{
     right: -0.4rem;
     background-color: var(--third-color);
     position: absolute;
-    transform: scaleY(0);
-    transition: 0.3s all;
+    transform: scaleY(0%);
+    transition: 0.5s ease-out all;
 }
 
-.navbar ul a:hover::before{
+
+.navbar ul a.active::before{
     transform: scaleY(100%);
 }
 
-.navbar ul a:hover::after{
+.navbar ul a.active::after{
     transform: scaleY(100%);
 }
 
@@ -603,4 +613,20 @@ select{
 .review-content{
     font-style: italic;
     font-weight: lighter;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    background-color: #132A3E;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: #FBAF00;
+}
+
+.footer p{
+    font-size: 1rem;
+    font-style: italic;
 }
