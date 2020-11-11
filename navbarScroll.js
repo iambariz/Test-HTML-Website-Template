@@ -1,6 +1,8 @@
   
 const header = document.querySelector(".header");
 
+const youUnderlined = document.querySelector('.you-animated');
+
 const home = document.querySelector("#hero");
 const offers = document.querySelector("#offers");
 const planner = document.querySelector("#planner");
@@ -26,7 +28,7 @@ window.addEventListener("scroll", ()=>{
     else if(planner.offsetTop <= windowVar && contact.offsetTop > windowVar){
         setAndRemove(plannerButton, homeButton, offersButton, contactButton)
     }
-    else if(offers.offsetTop <= windowVar ){
+    else if(contact.offsetTop -500 <= windowVar){
         setAndRemove(contactButton, homeButton, plannerButton, offersButton)
     }
     else{
@@ -41,5 +43,13 @@ window.addEventListener("scroll", ()=>{
     }
     else{
         header.classList.remove("scrolled");
+    }
+});
+
+
+window.addEventListener("scroll", ()=>{
+    let windowVar = window.pageYOffset;
+    if(home.offsetTop +250 <= windowVar){
+        youUnderlined.classList.add("underlined");
     }
 });

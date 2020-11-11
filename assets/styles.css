@@ -296,7 +296,7 @@ h3{
 .you-animated{
     position: relative;
 }
-.you-animated:before{
+.you-animated.underlined:before{
     content: '';
     width: 0.3rem;
     height: 0.2rem;
@@ -304,11 +304,9 @@ h3{
     left: -0.5rem;
     background-color: var(--third-color);
     position: absolute;
-    animation: exceed 2s ease 1;
-    animation-fill-mode: forwards;
+    animation: exceed 1s forwards;
+    -webkit-animation: exceed 1s forwards;
 }
-
-
 
 
 .grid{
@@ -485,6 +483,7 @@ h3{
     text-transform: uppercase;
     padding: 2.5rem;
     letter-spacing: 0.4rem;
+    margin-top: 7.5rem;
     }
 
 .input-group{
@@ -581,6 +580,7 @@ select{
 }
 
 .review-container{
+    margin-top: 7.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -594,7 +594,17 @@ select{
     background-color: #132A3E;
     padding: 2rem; 
     margin: 2rem 2rem;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+    transition: all 0.5s;
+}
 
+.card:hover{
+    -moz-box-shadow:    4px 4px 7px 8px #ccc;
+    -webkit-box-shadow: 4px 4px 7px 8px #ccc;
+    box-shadow:         4px 4px 7px 8px #ccc;
+    transform: scale(1.05, 1.05);
 }
 
 .review-rating{
@@ -618,6 +628,7 @@ select{
 /* Footer */
 
 .footer{
+    margin-top: 10rem;
     display: flex;
     background-color: #132A3E;
     padding: 1rem;
