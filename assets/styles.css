@@ -158,7 +158,7 @@ header.scrolled{
     left: -0.4rem;
     background-color: var(--third-color);
     position: absolute;
-    transform: scaleY(0%);
+    transform: scaleY(0);
     transition: 0.5s ease-out all;
 }
 .navbar ul a::after{
@@ -169,17 +169,17 @@ header.scrolled{
     right: -0.4rem;
     background-color: var(--third-color);
     position: absolute;
-    transform: scaleY(0%);
+    transform: scaleY(0);
     transition: 0.5s ease-out all;
 }
 
 
 .navbar ul a.active::before{
-    transform: scaleY(100%);
+    transform: scaleY(1);
 }
 
 .navbar ul a.active::after{
-    transform: scaleY(100%);
+    transform: scaleY(1);
 }
 
 .nav-link{
