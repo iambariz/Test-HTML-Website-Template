@@ -315,10 +315,9 @@ h3{
 
 
 .grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    /* If the screen is large it's 30 rem if it cannot be happen take all the avaliable space */
-    grid-gap: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .grid-item{
@@ -327,6 +326,9 @@ h3{
     align-items: center;
     justify-content: center;
     text-align: center;
+    min-width: 25rem;
+    margin: 0rem 2rem;
+    max-width: 35rem;
     background-color: var(--secondary-color);
     border-bottom-left-radius: 4.5rem;
     border-bottom-right-radius: 4.5rem;
@@ -475,6 +477,7 @@ h3{
 .form-container{
     display: flex;
     margin-top: 2rem;
+
 }
 
 .form{
@@ -647,10 +650,22 @@ select{
     font-style: italic;
 }
 
+/* Media Queries below */
+
+@media only screen and (max-width: 1200px) {
+    .navbar ul a{
+        margin: 2rem;
+  
+    }
+
+    .grid-item{
+        max-width: 40rem;
+        margin: 0rem 10rem;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
-/* If user opens the nav */
-
 
 
     .navbar ul {
@@ -692,15 +707,45 @@ select{
         display: flex;
     }
 
+    h1{
+        font-size: 2.4rem;
+    }
 
 
+    .headers h1{
+        font-size: 3.0rem;
+    }
+    
+    h3{
+        font-size: 1.8rem;
+    }
 
-}
 
+    .card{
+        min-width: 25rem;
+    }
 
-@media only screen and (max-width: 1200px) {
-    .navbar ul a{
-        margin: 2rem;
-  
+    .input-label{
+        font-size: 1.5rem;
+    }
+
+    .input-label{
+        font-size: 1.5rem;
+    }
+
+    #destination{
+        margin-top: 1rem;
+    }
+
+    .form{
+        flex-basis:45rem;
+    }
+
+    .grid-item{
+        max-width: 40rem;
+        min-width: 25rem;
+        margin: 0rem 0rem;
     }
 }
+
+
