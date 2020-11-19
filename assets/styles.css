@@ -198,6 +198,7 @@ header.scrolled{
 .brandLogo{
     font-size: 3rem;
     font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
 }
 
 /* Hero */
